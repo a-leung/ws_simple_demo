@@ -9,8 +9,19 @@ $(function() {
 		  function(message) {
 		    document.querySelector('#messages').innerHTML += '<li>' + message + '</li>';
 		  })
+
+
+  var dispatcher2 = new WebSocketRails('localhost:3000/websocket')
+
+  var channel = dispatcher2.subscribe('special_channel');
+
+  channel.bind('new_message', function(data) {
+    console.log('channel event received: ' + data);
+  });
+
+
 });
 
 function send(message) {
-  dispatcher.trigger('new_message', message);
+  dispatcher.trigger('blah_message', message);
 }
