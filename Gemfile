@@ -38,6 +38,10 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'websocket-rails', '~> 0.7.0'
+#gem 'websocket-rails', '~> 0.7.0'
 gem 'pry'
 #gem 'redis-rails'
+
+
+gem 'websocket-rails', github: 'moaa/websocket-rails', branch: 'threadsocket-rails'
+gem 'websocket-rails-js', github: 'websocket-rails/websocket-rails-js', branch: 'sub_protocols'

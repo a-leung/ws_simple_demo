@@ -12,8 +12,8 @@ class ChatController < WebsocketRails::BaseController
 
   def send_time
     time = { 'time' => Time.zone.now.to_s }
-    m = Mymodel.new
+    @m ||= Mymodel.new
+    @m.publish_to_channel
     WebsocketRails[:special_channel].trigger(:new_message, time.to_json )
-    WebsocketRails[:special_channel].trigger(:new_message, m.publish_to_channel)
   end
 end

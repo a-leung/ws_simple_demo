@@ -11,7 +11,7 @@ $(function() {
 		  })
 
 
-  var dispatcher2 = new WebSocketRails('localhost:3000/websocket')
+  var dispatcher2 = new WebSocketRails('localhost:9292/websocket')
 
   var channel = dispatcher2.subscribe('special_channel');
 
