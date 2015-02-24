@@ -38,5 +38,6 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'websocket-rails'
+gem 'websocket-rails', '~> 0.7.0'
 gem 'pry'
+#gem 'redis-rails'
