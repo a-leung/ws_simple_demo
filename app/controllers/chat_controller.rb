@@ -2,18 +2,11 @@ class ChatController < WebsocketRails::BaseController
   def new_message
     puts 'new_message: ' + message
     broadcast_message :new_message, 'Echo: ' + message
+    self.model_trigger
   end
 
-  def blah_message
-    puts 'blah message: ' + message
-    broadcast_message :new_message, 'Echo: ' + message
-    self.send_time
-  end
-
-  def send_time
-    time = { 'time' => Time.zone.now.to_s }
+  def model_trigger
     @m ||= Mymodel.new
     @m.publish_to_channel
-    WebsocketRails[:special_channel].trigger(:new_message, time.to_json )
   end
 end

@@ -10,18 +10,13 @@ $(function() {
 		    document.querySelector('#messages').innerHTML += '<li>' + message + '</li>';
 		  })
 
-
-  var dispatcher2 = new WebSocketRails('localhost:9292/websocket')
-
-  var channel = dispatcher2.subscribe('special_channel');
+  var channel = dispatcher.subscribe('special_channel');
 
   channel.bind('new_message', function(data) {
-    console.log('channel event received: ' + data);
+    console.log('special channel event received: ' + data);
   });
-
-
 });
 
 function send(message) {
-  dispatcher.trigger('blah_message', message);
+  dispatcher.trigger('new_message', message);
 }
