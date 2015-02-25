@@ -30,7 +30,7 @@ gem 'spring',        group: :development
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -44,3 +44,5 @@ gem 'pry'
 
 gem 'websocket-rails', github: 'moaa/websocket-rails', branch: 'threadsocket-rails'
 gem 'websocket-rails-js', github: 'websocket-rails/websocket-rails-js', branch: 'sub_protocols'
+
+gem 'rspec-rails', group: [:development, :test]
