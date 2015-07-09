@@ -1,28 +1,14 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Dead simple rails app to try out websocket rails.
 
-Things you may want to cover:
+== Get Started
+* git clone the repo to your local system
+* run `bundle install`
+* to get the server running, run: `puma -C config/puma.rb`
+* open a browser to: `http://localhost:9292`
+* open up the javascript console
+* type something into the text field and hit Send
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+== Notes
+* note that the console has items coming in and the list echoes back the input text.
