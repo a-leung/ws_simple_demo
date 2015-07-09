@@ -22,6 +22,5 @@ module WsTest2
     # config.i18n.default_locale = :de
 
     config.middleware.delete Rack::Lock
-
   end
 end
